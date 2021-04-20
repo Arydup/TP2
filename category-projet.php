@@ -9,8 +9,8 @@
 
 get_header();
 ?>
-////////////////////////////////////////////// Category-projet.PHP
-	<main id="primary" class="site-main">
+
+	<main id="primary" class="site-main centre">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -18,20 +18,23 @@ get_header();
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
+				?>	
 			</header><!-- .page-header -->
-
+			////////////////////////////////////////////// PROJET.PHP	
 			<section class="galerie">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
-				the_post();?>
-
+				the_post();
+				get_template_part( 'template-parts/content', 'galerie');
+				?>
+<!--
 				<div>
-					<a href="<?php echo get_permalink();?>"><?php the_post_thumbnail('thumbnail');?></a>
+					<a href=" echo get_permalink();?>"> the_post_thumbnail('thumbnail');?></a>
 				</div>
+				-->
 			<?php endwhile; ?>
-
+			
 			</section>
 		<?php endif; ?>
 

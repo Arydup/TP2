@@ -1,11 +1,42 @@
 .galerie{
     display: flex;
     flex-wrap: wrap;
+    //justify-content: center;
     a{
         display: block;        
     }
     img{
         display: block;
         width: 150px;
+        transition: all linear 1s;
+        &:hover{
+            transform: rotate(180deg);
+            opacity : 0;
+        }
+    }
+    article{
+        transition: all linear 1s;
+        width: 150px;
+        margin: 5px;
+        position: relative;
+        &:hover{
+            transform: scale(1.2);
+            
+        }
+        .galerie_info{
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+        }
     }
 }
+
+/*
+.centre{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}*/

@@ -409,6 +409,10 @@ h6 {
   clear: both;
 }
 
+h1 {
+  margin-top: 60px;
+}
+
 p {
   margin-bottom: 1.5em;
 }
@@ -1701,4 +1705,53 @@ Animations de la dernière barre bar3 (Créer une boucle pour le pattern)
 .fermerX3 {
   animation: fermerX3 0.2s both;
 }
+
+/* Local/galerie
+--------------------------------------------- */
+.galerie {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.galerie a {
+  display: block;
+}
+
+.galerie img {
+  display: block;
+  width: 150px;
+  transition: all linear 1s;
+}
+
+.galerie img:hover {
+  transform: rotate(180deg);
+  opacity: 0;
+}
+
+.galerie article {
+  transition: all linear 1s;
+  width: 150px;
+  margin: 5px;
+  position: relative;
+}
+
+.galerie article:hover {
+  transform: scale(1.2);
+}
+
+.galerie article .galerie_info {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+
+/*
+.centre{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}*/
 /*# sourceMappingURL=style.css.map */
