@@ -6,12 +6,17 @@
  *
  * @package theme-4w4
  */
-	global $tPropriété;
 ?>
 
 <article>
 	<a href="<?php echo get_permalink();?>"><?php the_post_thumbnail('thumbnail');?>
 	<div class="galerie_info">
 		<?php the_title()?>
+		<?php the_content(); ?>
+	</div>
+
+	<div class="description">
+	<?php the_author(); ?>
+	<?php echo str_replace("Projet_", "", get_the_title())?>
 	</div>
 </article>

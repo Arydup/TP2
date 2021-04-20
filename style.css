@@ -1733,6 +1733,9 @@ Animations de la dernière barre bar3 (Créer une boucle pour le pattern)
   width: 150px;
   margin: 5px;
   position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 .galerie article:hover {
@@ -1741,7 +1744,6 @@ Animations de la dernière barre bar3 (Créer une boucle pour le pattern)
 
 .galerie article .galerie_info {
   position: absolute;
-  display: block;
   top: 0;
   left: 0;
 }
