@@ -1,0 +1,41 @@
+
+/*------------------------------------------------------------------------------
+Les propriétés du header
+------------------------------------------------------------------------------*/
+.site-title {
+    font-family: $font__title;
+    font-size: clamp(.8rem, #{"-0.875rem + 5.633vw"}, 2.5rem);
+    font-weight: bold;
+    text-decoration: none;
+    color: #003;
+    margin-bottom: 0;
+    a{
+        text-decoration: none;
+    }
+}
+
+.site-description{
+    font-family: $font__title;
+    font-size: clamp(1rem, #{"-0.875rem + 5.633vw"}, 2rem);
+    font-weight: normal;
+    color: #003;
+    margin-top: 0;
+}
+
+.page-header{
+    margin-top: 70px;
+
+    .page-title{
+        font-size: 4rem;
+        color:rgb(42, 61, 165);
+        margin-bottom: 0;
+    }
+
+    .archive-description{
+        font-size: 1rem;
+        color:rgb(95, 109, 187);
+        p{
+            margin: 0 0 30px 0;
+        }
+    }
+}

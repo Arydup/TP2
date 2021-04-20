@@ -9,14 +9,17 @@
 ?>
 
 <article>
-	<a href="<?php echo get_permalink();?>"><?php the_post_thumbnail('thumbnail');?>
-	<div class="galerie_info">
-		<?php the_title()?>
-		<?php the_content(); ?>
-	</div>
 
-	<div class="description">
-	<?php the_author(); ?>
-	<?php echo str_replace("Projet_", "", get_the_title())?>
-	</div>
+	<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+		<?php the_post_thumbnail('thumbnail');?>
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p><a href="<?php echo get_permalink();?>"><?php the_title();?></p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
 </article>
