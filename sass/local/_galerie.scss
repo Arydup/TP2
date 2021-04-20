@@ -1,0 +1,11 @@
+.galerie{
+    display: flex;
+    flex-wrap: wrap;
+    a{
+        display: block;        
+    }
+    img{
+        display: block;
+        width: 150px;
+    }
+}
