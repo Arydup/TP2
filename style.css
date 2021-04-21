@@ -1705,76 +1705,48 @@ Animations de la dernière barre bar3 (Créer une boucle pour le pattern)
 .galerie {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  /*display: flex;
-    //display: grid;
-    //gap: 5px;
-    //grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-
-    flex-wrap: wrap;
-    //justify-content: center;
-    a{
-        display: block;        
-    }
-    img{
-        display: block;
-        width: 150px;
-        transition: all linear 1s;
-        &:hover{
-            -webkit-transform: rotateZ(180deg);
-            transform: rotateZ(180deg);
-            opacity : 0;
-        }
-    }
-    article{
-        transition: all linear 1s;
-        width: 150px;
-        margin: 5px;
-        position: relative;
-        display: flex;
-        //align-items: center;
-        //text-align: center;
-        &:hover{
-            transform: scale(1.2);
-            
-        }
-        
-        a{
-            width: 150px;
-            height: auto;
-        }
-        p{
-            margin: 0px;
-            text-align: center;
-        }
-        .galerie_info{
-            
-        }
-
-        .description{
-            position: absolute;
-            //display: block;
-            top: 0;
-            left: 0;
-        }
-    }
-}
-
-.centre{
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    */
+  justify-content: center;
 }
 
 .galerie .flip-card {
   background-color: transparent;
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   perspective: 1000px;
-  margin: 2%;
+  padding: 5%;
+}
+
+@media (min-width: 600px) {
+  .galerie .flip-card {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 800px) {
+  .galerie .flip-card {
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 20px;
+  }
+}
+
+.galerie .flip-card a {
+  text-decoration: none;
+  color: white;
+}
+
+.galerie .flip-card p {
+  text-align: center;
+  font-size: .8rem;
+}
+
+.galerie .flip-card h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  overflow-wrap: break-word;
 }
 
 .galerie .flip-card-inner {
@@ -1799,11 +1771,17 @@ Animations de la dernière barre bar3 (Créer une boucle pour le pattern)
 }
 
 .galerie .flip-card-front {
-  background-color: #bbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #90befa;
   color: black;
 }
 
 .galerie .flip-card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #2980b9;
   color: white;
   transform: rotateY(180deg);
@@ -1827,6 +1805,10 @@ Les propriétés du header
   text-decoration: none;
 }
 
+.site-main, #primary {
+  margin: 0 2%;
+}
+
 .site-description {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(1rem, -0.875rem + 5.633vw, 2rem);
@@ -1837,16 +1819,17 @@ Les propriétés du header
 
 .page-header {
   margin-top: 70px;
+  text-align: center;
 }
 
 .page-header .page-title {
-  font-size: 4rem;
+  font-size: clamp(1.8rem, -0.875rem + 8.333vw, 4rem);
   color: #2a3da5;
   margin-bottom: 0;
 }
 
 .page-header .archive-description {
-  font-size: 1rem;
+  font-size: clamp(0.8rem, -0.850rem + 4.333vw, 1.3rem);
   color: #5f6dbb;
 }
 
