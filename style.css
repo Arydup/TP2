@@ -1836,4 +1836,20 @@ Les propriétés du header
 .page-header .archive-description p {
   margin: 0 0 30px 0;
 }
+
+/* Local/footer
+--------------------------------------------- */
+.site-footer {
+  background-color: #223777;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-footer .ligne-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 /*# sourceMappingURL=style.css.map */

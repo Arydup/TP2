@@ -12,6 +12,19 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+		<div class="ligne-footer"> 
+			<?php if(is_active_sidebar('footer-1')):?>
+				<?php dynamic_sidebar('footer-1');?>
+			<?php endif;?>
+		</div>
+
+		<div class="ligne-footer">
+			<?php if(is_active_sidebar('footer-2')):?>
+				<?php dynamic_sidebar('footer-2');?>
+			<?php endif;?>
+		</div>
+		
+
 		<div class="site-info">
 			<!--<a href="<?php// echo esc_url( __( 'https://wordpress.org/', 'theme-4w4' ) ); ?>">
 				<?php
