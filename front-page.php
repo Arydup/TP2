@@ -114,6 +114,10 @@ liste des cours et des posts
 			
             </section>
 		<?php endif; ?>
+		<section class="nouvelles">
+			<!--<button id="bout_nouvelles">Afficher les 3 dernières nouvelles</button>-->
+			<section></section>
+		</section>
 
 	</main><!-- #main -->
 
