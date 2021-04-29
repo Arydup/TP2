@@ -113,11 +113,13 @@ liste des cours et des posts
 			endwhile;?>
 			
             </section>
+
+			<section class="nouvelles">
+				
+				<section></section>
+			</section>
 		<?php endif; ?>
-		<section class="nouvelles">
-			<!--<button id="bout_nouvelles">Afficher les 3 dernières nouvelles</button>-->
-			<section></section>
-		</section>
+		
 
 	</main><!-- #main -->
 
