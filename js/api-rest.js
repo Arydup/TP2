@@ -64,5 +64,4 @@ bout_ajout.addEventListener('mousedown', function(){
 		}
 	}
 })
-
 }())

@@ -8,7 +8,7 @@
  *
  * @package theme-4w4
  */
-
+$content_width = 'media="screen and (min-width: 801px)"'
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>

@@ -11,49 +11,6 @@ get_header();
 ?>
 
 <!------------------------------------------------------------------------------
-Ancien Carroussel
-------------------------------------------------------------------------------->
-<!--?php $tous_les_cours = ["Web", "Spécifique", "Jeu", "Image 2d/3d", "Conception"]?>
-
-		Début du caroussel
-		<section class="caroussel">
-			?php
-				foreach($tous_les_cours as $cours): ?>
-					<div><a href="#?= /*$cours; ?>">?= $cours;?></a></div>
-			?php/* endforeach; ?>
-		</section>
-		Faire une boucle pour voir chaque div présente
-		<section class="lesBoutons">
-			?php
-				foreach($tous_les_cours as $cours): ?>
-					<input type="radio" id="?= array_search($cours, $tous_les_cours); ?>" name="chiffreBouton" value="?= array_search($cours, $tous_les_cours); ?>">
-				?php endforeach; ?>
-		</section>
-		-->
-		<!--
-		<section class="caroussel2">
-		<article class="slide__conteneur">
-			<div class="slide">
-				<img src="" alt="">
-				<div class="slide__info">
-					<p>582-1W1 - 75h - Web</p>
-					<a href="http://localhost/4w4/2020/10/07/582-1w1-mise-en-page-web-75h/">Mise en page Web</a>
-					<p>Session : 1</p>
-				</div>
-			</div>
-		</article>
-		<article>2</article>
-		<article>3</article>
-		</section>
-
-		<section class="ctrl-carroussel">
-			<input type="radio" name="rad-carroussel">
-			<input type="radio" name="rad-carroussel">
-			<input type="radio" name="rad-carroussel">
-		</section>
-				-->
-
-<!------------------------------------------------------------------------------
 liste des cours et des posts
 ------------------------------------------------------------------------------->
 	<main id="primary" class="site-main">
@@ -104,6 +61,7 @@ liste des cours et des posts
 
 				elseif($tPropriété['typeCours'] == 'Projets personnels') :
 					get_template_part( 'template-parts/content', 'galerie');
+
 				else :
 					get_template_part( 'template-parts/content', 'bloc' );
 				endif;
@@ -131,7 +89,7 @@ liste des cours et des posts
 	</main><!-- #main -->
 
 <?php
-//get_sidebar();
+get_sidebar();
 get_footer();
 
 function convertir_tableau(&$tPropriété){
@@ -153,7 +111,6 @@ function class_composant($typeCours){
 	else{
 		return 'class="bloc"';
 	}
-	//(in_array($tPropriété['typeCours'], ['Web', 'Jeu'])? 'class="carroussel2"' : 'class="bloc"')
 }
 
 ?>
