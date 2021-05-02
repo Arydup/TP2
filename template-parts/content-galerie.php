@@ -17,7 +17,7 @@
     		<div class="flip-card-back">
       			<h1><a href="<?php echo get_permalink();?>"><?php echo str_replace("Projet_", "", get_the_title())?></h1>
       			<p><?php the_content();?></p>
-     	 		<p><?php the_author();?></p>
+     	 		<p><?php if(get_field('auteur')!= "") : get_field('auteur'); endif;?></p>
     		</div>
   		</div>
 	</div>

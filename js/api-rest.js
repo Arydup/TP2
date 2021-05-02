@@ -12,7 +12,7 @@ Fonction qui déplace horizontalement le carrousel selon le bouton touché
 		//console.log("appuyerBouton");
 		let maRequete = new XMLHttpRequest();
 		console.log(maRequete)
-		maRequete.open('GET', 'http://localhost/4w4-3/wp-json/wp/v2/posts?categories=33&per_page=3');
+		maRequete.open('GET', monObjJS.siteURL + '/wp-json/wp/v2/posts?categories=33&order=desc&per_page=3');
 		maRequete.onload = function () {
 			console.log(maRequete)
 			if (maRequete.status >= 200 && maRequete.status < 400) {
@@ -34,4 +34,35 @@ Fonction qui déplace horizontalement le carrousel selon le bouton touché
 		}
 		maRequete.send()
 	}
+
+/*------------------------------------------------------------------------------
+Contrôle du formulaire d'édition d'articles de catégorie Nouvelles
+----------------------------------------------------------------------------- */
+let bout_ajout = document.getElementById('bout-rapide')
+bout_ajout.addEventListener('mousedown', function(){
+	//console.log("Ajout");
+	let monArticle = {
+		"title" : document.querySelector('.admin-rapide [name="title"]').value,
+		"content" : document.querySelector('.admin-rapide [name="content"]').value,
+		"status" : "published",
+		"categories" : [33],
+	}
+	let creerArticle = new XMLHttpRequest();
+	creerArticle.open("POST", monObjJS.siteURL + '/wp-json/wp/v2/posts')
+	creerArticle.setRequestHeader("X-WP-Nonce", monObjJS.nonce)
+	creerArticle.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
+	creerArticle.send(JSON.stringify(monArticle))
+	creerArticle.onreadystatechange = function() {
+		if(creerArticle.readyState == 4){
+			if(creerArticle.status == 201){
+				document.querySelector('.admin-rapide [name="title"]').value = ''
+				document.querySelector('.admin-rapide [name="content"]').value = ''
+			}
+		}
+		else{
+			alert('Erreur, vous devez réessayer - status = ' + creerArticle.status)
+		}
+	}
+})
+
 }())

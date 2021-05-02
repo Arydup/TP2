@@ -1360,8 +1360,10 @@ Propriétés de la liste des cours et de la section centrale
   margin: 2% 4% 2% 2%;
 }
 
-.home .nouvelles section p {
-  padding-left: 3rem;
+@media (min-width: 600px) {
+  .home .nouvelles section p {
+    padding-left: 3rem;
+  }
 }
 
 /* Local/caroussel
@@ -1861,5 +1863,12 @@ Les propriétés du header
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+/* Local/formulaire
+--------------------------------------------- */
+.admin-rapide {
+  width: 70%;
+  margin: 2% 4% 2% 3%;
 }
 /*# sourceMappingURL=style.css.map */

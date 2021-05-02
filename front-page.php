@@ -102,9 +102,8 @@ liste des cours et des posts
 					get_template_part( 'template-parts/content', 'carroussel' );
 					$ctrl_radio .= '<input type="radio" name="rad-'.$tPropriété['typeCours'].'">';
 
-				elseif($tPropriété['typeCours'] == 'Projets') :
+				elseif($tPropriété['typeCours'] == 'Projets personnels') :
 					get_template_part( 'template-parts/content', 'galerie');
-
 				else :
 					get_template_part( 'template-parts/content', 'bloc' );
 				endif;
@@ -114,11 +113,19 @@ liste des cours et des posts
 			
             </section>
 
-			<section class="nouvelles">
-				
-				<section></section>
-			</section>
 		<?php endif; ?>
+
+		<section class="admin-rapide">
+		<h3>Ajouter un article de catégorie nouvelles</h3>
+			<input type="text" name="title" placeholder="Titre">
+			<textarea name="content"></textarea>
+			<button id='bout-rapide'>Créer une nouvelle</button>
+		</section>
+
+		<section class="nouvelles">
+				
+			<section></section>
+		</section>
 		
 
 	</main><!-- #main -->
@@ -140,7 +147,7 @@ function class_composant($typeCours){
 	if(in_array($typeCours, ['Web', 'Jeu'])){
 		return 'class="carroussel2"';
 	}
-	elseif($typeCours == 'Projets'){
+	elseif($typeCours == 'Projets personnels'){
 		return 'class="galerie"';
 	}
 	else{
