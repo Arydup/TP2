@@ -22,6 +22,17 @@
 
 .widget-area {
 	grid-area: sidebar;
+
+	background-color: $color__clip;
+	h2{
+		text-align: center;
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		list-style-type: none;
+	}
 }
 
 .site-footer {

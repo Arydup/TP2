@@ -692,6 +692,18 @@ textarea {
 
 .widget-area {
   grid-area: sidebar;
+  background-color: rgba(181, 219, 255, 0.8);
+}
+
+.widget-area h2 {
+  text-align: center;
+}
+
+.widget-area ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
 }
 
 .site-footer {
@@ -1232,49 +1244,9 @@ body.home::after {
 /*------------------------------------------------------------------------------
 Les propriétés du header
 ------------------------------------------------------------------------------*/
-/*.site-title {
-    font-family: $font__title;
-    font-size: clamp(.8rem, -0.875rem + 5.633vw, 2.5rem);
-    font-weight: bold;
-    text-decoration: none;
-    color: #003;
-    margin-bottom: 0;
-    a{
-        text-decoration: none;
-    }
-}*/
 .home .entry-header {
   font-size: clamp(0.9rem, -0.875rem + 8.333vw, 3rem);
   margin: 0px;
-}
-
-/*
-.site-description{
-    font-family: $font__title;
-    font-size: clamp(1rem, -0.875rem + 5.633vw, 2rem);
-    font-weight: normal;
-    color: #003;
-    margin-top: 0;
-}*/
-/*------------------------------------------------------------------------------
-Pour le footer
------------------------------------------------------------------------------ */
-#colophon {
-  background-color: rgba(181, 219, 255, 0.8);
-  height: 100px;
-  margin-top: 100px;
-  font-size: clamp(1.5rem, -0.875rem + 4.333vw, 2rem);
-}
-
-@media (min-width: 600px) {
-  #colophon {
-    height: 120px;
-    text-align: left;
-  }
-}
-
-#colophon p {
-  font-size: clamp(0.7rem, -0.875rem + 8.333vw, 1rem);
 }
 
 /*------------------------------------------------------------------------------
@@ -1884,10 +1856,10 @@ Les propriétés du header
   text-decoration: none;
 }
 
-.site-main, #primary {
-  margin: 0 2%;
-}
-
+/*
+.site-main, #primary{
+    margin: 0 2%;
+}*/
 .site-description {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(1rem, -0.875rem + 5.633vw, 2rem);
@@ -1897,7 +1869,8 @@ Les propriétés du header
 }
 
 .page-header {
-  margin-top: 70px;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
@@ -1916,26 +1889,79 @@ Les propriétés du header
   margin: 0 0 30px 0;
 }
 
+/*------------------------------------------------------------------------------
+Pour le contenu
+----------------------------------------------------------------------------- */
+#primary, #secondary {
+  margin-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+#secondary {
+  display: none;
+  margin-left: 2rem;
+  min-width: 275px;
+}
+
+@media (min-width: 800px) {
+  #secondary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+#secondary form {
+  margin-top: 1rem;
+}
+
 /* Local/footer
 --------------------------------------------- */
+/*------------------------------------------------------------------------------
+Pour le footer
+----------------------------------------------------------------------------- */
 .site-footer {
   background-color: #223777;
-  color: #fff;
+  color: #223777;
+  display: block;
   display: flex;
   flex-direction: column;
 }
 
 .site-footer .ligne-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: block;
+}
+
+@media (min-width: 600px) {
+  .site-footer .ligne-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+#colophon {
+  background-color: rgba(181, 219, 255, 0.8);
+  text-align: center;
+  height: 100%;
+  font-size: clamp(1rem, -0.875rem + 4.333vw, 1.5rem);
+}
+
+@media (min-width: 600px) {
+  #colophon {
+    text-align: left;
+  }
+}
+
+#colophon p {
+  font-size: clamp(0.7rem, -0.875rem + 8.333vw, 1rem);
 }
 
 /* Local/formulaire
 --------------------------------------------- */
 .admin-rapide {
-  width: 70%;
   margin: 2% 4% 2% 3%;
 }
 /*# sourceMappingURL=style.css.map */

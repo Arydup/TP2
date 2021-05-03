@@ -1,12 +1,33 @@
+/*------------------------------------------------------------------------------
+Pour le footer
+----------------------------------------------------------------------------- */
 .site-footer{
     background-color: $color__link__jeu;
-    color: #fff;
+    color: $color__link__jeu;
+    display: block;
     display: flex;
     flex-direction: column;
+
     .ligne-footer{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        display: block;
+        @include media-tablette{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+#colophon{
+    background-color: $color__clip;
+    text-align: center;
+    height: 100%;
+    font-size: clamp(1rem, #{"-0.875rem + 4.333vw"}, 1.5rem);
+    @include media-tablette{
+        text-align: left;
+    }
+    p{
+        font-size: clamp(.7rem, #{"-0.875rem + 8.333vw"}, 1rem);
     }
 }

@@ -49,46 +49,11 @@ body.home::after{
 /*------------------------------------------------------------------------------
 Les propriétés du header
 ------------------------------------------------------------------------------*/
-/*.site-title {
-    font-family: $font__title;
-    font-size: clamp(.8rem, #{"-0.875rem + 5.633vw"}, 2.5rem);
-    font-weight: bold;
-    text-decoration: none;
-    color: #003;
-    margin-bottom: 0;
-    a{
-        text-decoration: none;
-    }
-}*/
 .home .entry-header{
     font-size: clamp(.9rem, #{"-0.875rem + 8.333vw"}, 3rem);
     margin: 0px;
 }
-/*
-.site-description{
-    font-family: $font__title;
-    font-size: clamp(1rem, #{"-0.875rem + 5.633vw"}, 2rem);
-    font-weight: normal;
-    color: #003;
-    margin-top: 0;
-}*/
 
-/*------------------------------------------------------------------------------
-Pour le footer
------------------------------------------------------------------------------ */
-#colophon{
-    background-color: $color__clip;
-    height: 100px;
-    margin-top: 100px;
-    font-size: clamp(1.5rem, #{"-0.875rem + 4.333vw"}, 2rem);
-    @include media-tablette{
-        height: 120px;
-        text-align: left;
-    }
-    p{
-        font-size: clamp(.7rem, #{"-0.875rem + 8.333vw"}, 1rem);
-    }
-}
 
 /*------------------------------------------------------------------------------
 Propriétés de la liste des cours et de la section centrale

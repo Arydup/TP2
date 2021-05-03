@@ -28,11 +28,6 @@ get_header();
 				the_post();
 				get_template_part( 'template-parts/content', 'galerie');
 				?>
-<!--
-				<div>
-					<a href=" echo get_permalink();?>"> the_post_thumbnail('thumbnail');?></a>
-				</div>
-				-->
 			<?php endwhile; ?>
 			
 			</section>
