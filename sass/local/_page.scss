@@ -26,12 +26,12 @@ Les propriétés du header
     margin-top: 0;
 }
 
-.page-header{
+.page-header, .entry-header{
     margin: 0;
     padding: 0;
     text-align: center;
 
-    .page-title{
+    .page-title, .entry-title{
         //font-size: 4rem;
         font-size: clamp(1.8rem, #{"-0.875rem + 8.333vw"}, 4rem);
         color:rgb(42, 61, 165);

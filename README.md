@@ -1,13 +1,12 @@
 # TIM Maisonneuve #
 ## Créé par : Aryane Duperron ##
-### Exer 4 ###
+### Labo 9 ###
 --------------------------------
 Groupe 1, cours du mardi
 
-En plus du cours, les modifications principales apportées dans l'exercice 4 sont :
-- Modification de page.scss
+En plus du cours, les modifications principales apportées sont :
+- Ajout de nouvelles --> non fonctionnel erreur 400
 - Modification du visuel des pages
-- Ajout et modification des widget-area directement dans wordpress
-- Ajout d'une galérie dans la page d'accueil et d'une page galérie
-- Ajout des articles de mes projets avec les liens vidéos de mes réalisations
+- Modification des widget-area directement dans wordpress
+
 Lien vers ma page wordpress sur [webdev](https://e1724050.webdev.cmaisonneuve.qc.ca/tim)

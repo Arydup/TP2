@@ -4,15 +4,19 @@ Fonction qui déplace horizontalement le carrousel selon le bouton touché
 (function(){
 	//let bouton = document.getElementById('bout_nouvelles');
 	let nouvelles = document.querySelector('.nouvelles section');
+	let annonce = document.getElementById('annonce');
 	//bouton.addEventListener('mousedown', monAjax);
-	window.addEventListener('load', monAjax);
+	window.addEventListener('load', function(){
+		monAjax(monObjJS.siteURL + '/wp-json/wp/v2/posts?categories=33&order=desc&per_page=3', nouvelles)
+		monAjax( monObjJS.siteURL + '/wp-json/wp/v2/posts?categories=35&order=desc&per_page=3', annonce)
+	});
 
-	function monAjax()
+	function monAjax(requete, elmDom)
 	{
 		//console.log("appuyerBouton");
 		let maRequete = new XMLHttpRequest();
 		console.log(maRequete)
-		maRequete.open('GET', monObjJS.siteURL + '/wp-json/wp/v2/posts?categories=33&order=desc&per_page=3');
+		maRequete.open('GET', requete);
 		maRequete.onload = function () {
 			console.log(maRequete)
 			if (maRequete.status >= 200 && maRequete.status < 400) {
@@ -23,7 +27,7 @@ Fonction qui déplace horizontalement le carrousel selon le bouton touché
 					chaineResultat += '<h2>' + elm.title.rendered + '</h2>';
 					chaineResultat +=  elm.content.rendered;
 				}
-				nouvelles.innerHTML = chaineResultat;
+				elmDom.innerHTML = chaineResultat;
 			}
 			else {
 				console.log('La connexion est faite mais il y a une erreur')
@@ -45,12 +49,13 @@ bout_ajout.addEventListener('mousedown', function(){
 		"title" : document.querySelector('.admin-rapide [name="title"]').value,
 		"content" : document.querySelector('.admin-rapide [name="content"]').value,
 		"status" : "published",
-		"categories" : [33],
+		"categories" : [35]
 	}
 	let creerArticle = new XMLHttpRequest();
 	creerArticle.open("POST", monObjJS.siteURL + '/wp-json/wp/v2/posts')
 	creerArticle.setRequestHeader("X-WP-Nonce", monObjJS.nonce)
 	creerArticle.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
+	console.log(JSON.stringify(monArticle))
 	creerArticle.send(JSON.stringify(monArticle))
 	creerArticle.onreadystatechange = function() {
 		if(creerArticle.readyState == 4){

@@ -671,12 +671,13 @@ textarea {
 .site {
   display: grid;
   grid-template-columns: 100% 0%;
-  grid-template-areas: "header header" "main sidebar" "footer footer";
+  grid-template-areas: "header header" "main main" "sidebar sidebar" "footer footer";
 }
 
 @media (min-width: 800px) {
   .site {
     grid-template-columns: 80% 20%;
+    grid-template-areas: "header header" "main sidebar" "footer footer";
   }
 }
 
@@ -1868,24 +1869,24 @@ Les propriétés du header
   margin-top: 0;
 }
 
-.page-header {
+.page-header, .entry-header {
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-.page-header .page-title {
+.page-header .page-title, .page-header .entry-title, .entry-header .page-title, .entry-header .entry-title {
   font-size: clamp(1.8rem, -0.875rem + 8.333vw, 4rem);
   color: #2a3da5;
   margin-bottom: 0;
 }
 
-.page-header .archive-description {
+.page-header .archive-description, .entry-header .archive-description {
   font-size: clamp(0.8rem, -0.850rem + 4.333vw, 1.3rem);
   color: #5f6dbb;
 }
 
-.page-header .archive-description p {
+.page-header .archive-description p, .entry-header .archive-description p {
   margin: 0 0 30px 0;
 }
 
@@ -1963,5 +1964,11 @@ Pour le footer
 --------------------------------------------- */
 .admin-rapide {
   margin: 2% 4% 2% 3%;
+}
+
+/* Local/sidebar
+--------------------------------------------- */
+#secondary {
+  padding-left: 8%;
 }
 /*# sourceMappingURL=style.css.map */
