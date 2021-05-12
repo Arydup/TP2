@@ -1,6 +1,11 @@
 .site {
 	display: grid;
 	grid-template-columns: 100% 0%;
+	grid-template-areas:
+		"header header"
+		"main main"
+		"sidebar sidebar"
+		"footer footer";
 	@include media-desktop{
 		grid-template-columns: 80% 20%;
 		grid-template-areas:
@@ -9,11 +14,6 @@
 		"footer footer";
 	}
 	//grid-template-columns: auto ($size__site-sidebar);
-	grid-template-areas:
-		"header header"
-		"main main"
-		"sidebar sidebar"
-		"footer footer";
 }
 
 .site-header {

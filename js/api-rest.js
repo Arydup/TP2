@@ -1,11 +1,9 @@
 /*------------------------------------------------------------------------------
-Fonction qui déplace horizontalement le carrousel selon le bouton touché
+Création d'articles et requête Ajax
 ----------------------------------------------------------------------------- */
 (function(){
-	//let bouton = document.getElementById('bout_nouvelles');
 	let nouvelles = document.querySelector('.nouvelles section');
 	let annonce = document.getElementById('annonce');
-	//bouton.addEventListener('mousedown', monAjax);
 	window.addEventListener('load', function(){
 		monAjax(monObjJS.siteURL + '/wp-json/wp/v2/posts?categories=33&order=desc&per_page=3', nouvelles)
 		monAjax( monObjJS.siteURL + '/wp-json/wp/v2/posts?categories=35&order=desc&per_page=3', annonce)
@@ -13,28 +11,27 @@ Fonction qui déplace horizontalement le carrousel selon le bouton touché
 
 	function monAjax(requete, elmDom)
 	{
-		//console.log("appuyerBouton");
-		let maRequete = new XMLHttpRequest();
+		let maRequete = new XMLHttpRequest()
 		console.log(maRequete)
-		maRequete.open('GET', requete);
+		maRequete.open('GET', requete)
 		maRequete.onload = function () {
 			console.log(maRequete)
 			if (maRequete.status >= 200 && maRequete.status < 400) {
-				let data = JSON.parse(maRequete.responseText);
-				let chaineResultat = '';
+				let data = JSON.parse(maRequete.responseText)
+				let chaineResultat = ''
 
 				for (const elm of data) {
-					chaineResultat += '<h2>' + elm.title.rendered + '</h2>';
-					chaineResultat +=  elm.content.rendered;
+					chaineResultat += '<h2>' + elm.title.rendered + '</h2>'
+					chaineResultat +=  elm.content.rendered
 				}
-				elmDom.innerHTML = chaineResultat;
+				elmDom.innerHTML = chaineResultat
 			}
 			else {
 				console.log('La connexion est faite mais il y a une erreur')
 			}
 		}
 		maRequete.onerror = function () {
-			console.log("erreur de connexion");
+			console.log("erreur de connexion")
 		}
 		maRequete.send()
 	}
@@ -44,7 +41,6 @@ Contrôle du formulaire d'édition d'articles de catégorie Nouvelles
 ----------------------------------------------------------------------------- */
 let bout_ajout = document.getElementById('bout-rapide')
 bout_ajout.addEventListener('mousedown', function(){
-	//console.log("Ajout");
 	let monArticle = {
 		"title" : document.querySelector('.admin-rapide [name="title"]').value,
 		"content" : document.querySelector('.admin-rapide [name="content"]').value,

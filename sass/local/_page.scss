@@ -13,10 +13,6 @@ Les propriétés du header
         text-decoration: none;
     }
 }
-/*
-.site-main, #primary{
-    margin: 0 2%;
-}*/
 
 .site-description{
     font-family: $font__title;
@@ -32,7 +28,6 @@ Les propriétés du header
     text-align: center;
 
     .page-title, .entry-title{
-        //font-size: 4rem;
         font-size: clamp(1.8rem, #{"-0.875rem + 8.333vw"}, 4rem);
         color:rgb(42, 61, 165);
         margin-bottom: 0;

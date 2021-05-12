@@ -1,3 +1,6 @@
+/*------------------------------------------------------------------------------
+Styles pour la galérie d'images
+----------------------------------------------------------------------------- */
 .galerie{
     display: flex;
     flex-wrap: wrap;
@@ -75,10 +78,7 @@
       .flip-card-back {
         display: flex;
         flex-direction: column;
-        //align-items: center;
         justify-content: center;
-
-
         background-color: #2980b9;
         color: white;
         transform: rotateY(180deg);
