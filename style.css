@@ -1865,7 +1865,6 @@ Pour le contenu
 ----------------------------------------------------------------------------- */
 #primary, #secondary {
   margin-top: 3rem;
-  padding-bottom: 4rem;
 }
 
 #secondary {
@@ -1935,12 +1934,42 @@ Styles pour le footer
 /*------------------------------------------------------------------------------
 Styles pour le formulaire
 ----------------------------------------------------------------------------- */
+.home #annonce {
+  background-color: #ddd;
+  min-height: 160px;
+  height: auto;
+  padding: 25px 10px 10px 10px;
+  border-bottom: ridge 2px #e8f4fc;
+}
+
 .admin-rapide {
-  margin: 2% 4% 2% 3%;
+  margin-top: 10%;
+  padding: 5% 4% 5% 3%;
+  background-color: rgba(181, 219, 255, 0.8);
+}
+
+.admin-rapide h3 {
+  margin: 0;
+  text-decoration: underline;
+}
+
+.admin-rapide input {
+  text-align: center;
+  margin: 8% 4% 2% 3%;
+}
+
+.admin-rapide #bout-rapide {
+  margin-top: 5%;
+  color: rgba(133, 133, 133, 0.8);
+  background-color: rgba(217, 237, 255, 0.8);
+}
+
+.admin-rapide #bout-rapide:hover {
+  cursor: pointer;
 }
 
 /*------------------------------------------------------------------------------
-Les propriétés des nouvelles et des annonces
+Les propriétés des nouvelles
 ------------------------------------------------------------------------------*/
 .home .nouvelles {
   display: flex;
@@ -1955,7 +1984,7 @@ Les propriétés des nouvelles et des annonces
         }*/
 }
 
-.home .nouvelles .nouvelleIndividuelle:nth-of-type(odd) {
+.home .nouvelles .nouvelleIndividuelle:nth-of-type(even) {
   background-color: rgba(181, 219, 255, 0.8);
 }
 
@@ -1965,14 +1994,6 @@ Les propriétés des nouvelles et des annonces
 
 .home .nouvelles .nouvelleIndividuelle p {
   text-align: justify;
-}
-
-.home #annonce {
-  background-color: #ddd;
-  min-height: 160px;
-  height: auto;
-  padding: 25px 10px 10px 10px;
-  border-bottom: ridge 2px #e8f4fc;
 }
 
 /* Local/sidebar

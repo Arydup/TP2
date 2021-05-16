@@ -1,13 +1,39 @@
 /*------------------------------------------------------------------------------
 Styles pour le formulaire
 ----------------------------------------------------------------------------- */
+.home #annonce{
+    background-color: $color__background-article;
+    min-height: 160px;
+    height: auto;
+    padding: 25px 10px 10px 10px;
+    border-bottom: ridge 2px $color__border-article;
+}
+
 .admin-rapide{
-    //width: 70%;
-    margin: 2% 4% 2% 3%;
+    margin-top: 10%;
+    padding: 5% 4% 5% 3%;
+    background-color: $color__background-nouvelles;
+    h3{
+        margin: 0;
+        text-decoration: underline;
+    }
+    input{
+        text-align: center;
+        margin:8% 4% 2% 3%;
+    }
+
+    #bout-rapide{
+        margin-top: 5%;
+        color: $color__bouton;
+        background-color: $color__background-bouton;
+        &:hover{
+            cursor: pointer;
+        }
+    }
 }
 
 /*------------------------------------------------------------------------------
-Les propriétés des nouvelles et des annonces
+Les propriétés des nouvelles
 ------------------------------------------------------------------------------*/
 .home .nouvelles{
     display: flex;
@@ -16,7 +42,7 @@ Les propriétés des nouvelles et des annonces
     .nouvelleIndividuelle{
         //margin-top: 10px;
         padding: 2% 4% 5% 2%;
-        &:nth-of-type(odd){
+        &:nth-of-type(even){
             background-color: $color__background-nouvelles;
         }
         /*
@@ -31,12 +57,4 @@ Les propriétés des nouvelles et des annonces
             text-align: justify;
         }
     }
-}
-
-.home #annonce{
-    background-color: $color__background-article;
-    min-height: 160px;
-    height: auto;
-    padding: 25px 10px 10px 10px;
-    border-bottom: ridge 2px $color__border-article;
 }
