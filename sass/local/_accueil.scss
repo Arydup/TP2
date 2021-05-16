@@ -67,7 +67,7 @@ Propriétés de la liste des cours et de la section centrale
     h2{
         font-size: clamp(.9rem, #{"-0.875rem + 8.333vw"}, 3rem);
         text-decoration: underline;
-        &:first-child{padding-top: 30px;}
+        padding-top: 30px;
     }
 
     section.bloc{

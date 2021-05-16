@@ -1264,9 +1264,6 @@ Propriétés de la liste des cours et de la section centrale
 .liste-cours h2 {
   font-size: clamp(0.9rem, -0.875rem + 8.333vw, 3rem);
   text-decoration: underline;
-}
-
-.liste-cours h2:first-child {
   padding-top: 30px;
 }
 
@@ -1948,21 +1945,26 @@ Les propriétés des nouvelles et des annonces
 .home .nouvelles {
   display: flex;
   flex-direction: column;
-  margin: 2% 4% 2% 2%;
 }
 
 .home .nouvelles .nouvelleIndividuelle {
-  background-color: olive;
+  padding: 2% 4% 5% 2%;
   /*
-        h2:nth-child(odd), div:nth-child(odd){
-            background-color: olive;
-        }
-
-        p{
-            @include media-tablette{
-                padding-left: 3rem;
-            }
+        &:first-child{
+            margin-top: 60px;
         }*/
+}
+
+.home .nouvelles .nouvelleIndividuelle:nth-of-type(odd) {
+  background-color: rgba(181, 219, 255, 0.8);
+}
+
+.home .nouvelles .nouvelleIndividuelle h2 {
+  padding-top: 0;
+}
+
+.home .nouvelles .nouvelleIndividuelle p {
+  text-align: justify;
 }
 
 .home #annonce {
