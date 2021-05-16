@@ -32,6 +32,7 @@
 				//printf( esc_html__( 'Proudly powered by %s', 'theme-4w4' ), 'WordPress' );
 				?>
 			</a>-->
+			<hr>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */

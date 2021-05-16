@@ -1726,6 +1726,7 @@ Styles pour la galérie d'images
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 5%;
 }
 
 .galerie .flip-card {
@@ -1892,11 +1893,33 @@ Pour le contenu
 Styles pour le footer
 ----------------------------------------------------------------------------- */
 .site-footer {
-  background-color: #223777;
+  background-color: rgba(181, 219, 255, 0.8);
   color: #223777;
   display: block;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  font-size: clamp(1rem, -0.875rem + 4.333vw, 1.2rem);
+}
+
+@media (min-width: 600px) {
+  .site-footer {
+    text-align: left;
+  }
+}
+
+.site-footer p {
+  font-size: clamp(0.7rem, -0.875rem + 8.333vw, 1rem);
+}
+
+.site-footer h2 {
+  margin-top: 50px;
+}
+
+@media (min-width: 600px) {
+  .site-footer h2 {
+    margin-top: 24px;
+  }
 }
 
 .site-footer .ligne-footer {
@@ -1912,21 +1935,16 @@ Styles pour le footer
   }
 }
 
-#colophon {
-  background-color: rgba(181, 219, 255, 0.8);
-  text-align: center;
-  height: 100%;
-  font-size: clamp(1rem, -0.875rem + 4.333vw, 1.5rem);
-}
-
 @media (min-width: 600px) {
-  #colophon {
-    text-align: left;
+  .site-footer .site-info {
+    padding: 0 3%;
   }
 }
 
-#colophon p {
-  font-size: clamp(0.7rem, -0.875rem + 8.333vw, 1rem);
+.site-footer select {
+  color: rgba(133, 133, 133, 0.8);
+  background-color: rgba(217, 237, 255, 0.8);
+  cursor: pointer;
 }
 
 /* Local/formulaire

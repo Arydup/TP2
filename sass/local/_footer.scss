@@ -2,12 +2,26 @@
 Styles pour le footer
 ----------------------------------------------------------------------------- */
 .site-footer{
-    background-color: $color__link__jeu;
+    background-color: $color__clip;
     color: $color__link__jeu;
     display: block;
     display: flex;
     flex-direction: column;
 
+    text-align: center;
+    font-size: clamp(1rem, #{"-0.875rem + 4.333vw"}, 1.2rem);
+    @include media-tablette{
+        text-align: left;
+    }
+    p{
+        font-size: clamp(.7rem, #{"-0.875rem + 8.333vw"}, 1rem);
+    }
+    h2{
+        margin-top: 50px;
+        @include media-tablette{
+            margin-top: 24px;
+        }
+    }
     .ligne-footer{
         display: block;
         @include media-tablette{
@@ -17,17 +31,16 @@ Styles pour le footer
             flex-wrap: wrap;
         }
     }
-}
 
-#colophon{
-    background-color: $color__clip;
-    text-align: center;
-    height: 100%;
-    font-size: clamp(1rem, #{"-0.875rem + 4.333vw"}, 1.5rem);
-    @include media-tablette{
-        text-align: left;
+    .site-info{
+        @include media-tablette{
+            padding: 0 3%;
+        }
     }
-    p{
-        font-size: clamp(.7rem, #{"-0.875rem + 8.333vw"}, 1rem);
+
+    select{
+        color: $color__bouton;
+        background-color: $color__background-bouton;
+        cursor: pointer;
     }
 }
