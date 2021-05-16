@@ -56,7 +56,6 @@ liste des cours et des posts
 					
 					<h2 id="<?= $tPropriété['typeCours']?>"><?php echo $tPropriété['typeCours']?></h2>
 					<section <?php echo class_composant($tPropriété['typeCours']) ; ?>>
-					<!--(in_array($tPropriété['typeCours'], ['Web', 'Jeu'])? 'class="carroussel2"' : 'class="bloc"')-->
 					
 				<?php endif; ?>
 			<?php 
@@ -85,8 +84,7 @@ liste des cours et des posts
 			<button id='bout-rapide'>Créer une nouvelle</button>
 		</section>
 
-		<section class="nouvelles">
-				
+		<section class="nouvelles">	
 			<section></section>
 		</section>
 		

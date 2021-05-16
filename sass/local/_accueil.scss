@@ -190,26 +190,3 @@ Propriétés de la liste des cours et de la section centrale
         }
     } //Fin section
 }
-/*------------------------------------------------------------------------------
-Les propriétés des nouvelles et des annonces
-------------------------------------------------------------------------------*/
-.home .nouvelles{
-    display: flex;
-    flex-direction: column;
-    margin: 2% 4% 2% 2%;
-    section{
-        p{
-            @include media-tablette{
-                padding-left: 3rem;
-            }
-        }
-    }
-}
-
-.home #annonce{
-    background-color: $color__background-article;
-    min-height: 160px;
-    height: auto;
-    padding: 25px 10px 10px 10px;
-    border-bottom: ridge 2px $color__border-article;
-}

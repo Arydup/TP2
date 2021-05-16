@@ -21,8 +21,10 @@ function monAjax(requete, elmDom)
            let data = JSON.parse(maRequete.responseText);
            chaineResultat = ''
            for (const elm of data) {
-              chaineResultat +=  '<h2>' + elm.title.rendered + '</h2>'
-              chaineResultat += elm.content.rendered
+                chaineResultat += '<div class="nouvelleIndividuelle">'
+                chaineResultat +=  '<h2>' + elm.title.rendered + '</h2>'
+                chaineResultat += elm.content.rendered
+                chaineResultat += '</div>'
            }
            elmDom.innerHTML = chaineResultat;
           
