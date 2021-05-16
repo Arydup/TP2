@@ -36,10 +36,14 @@ $color__carroussel__jeu: #a3b1db;
 $color__carroussel__imagerie: #dfdcb0;
 $color__carroussel__conception: #ddb8df;
 
+/* Couleurs pour les boutons du carroussel */
+$color__bouton-carroussel-web: #4f86c5;
+$color__bouton-carroussel-jeu: rgba(50, 207, 255, 0.685);
+
 /* Couleurs pour les sections de la page d'accueil */
-$color__link__web: #3e6b51;
-$color__background__web: rgba(0,255,0,0.3);
-$color__link__specifique: #8b3148;
+$color__link__web: #433e6b;
+$color__background__web: rgba(50, 207, 255, 0.685);
+$color__link__specifique: #2a2e55;
 $color__link__jeu: #223777;
 $color__link__imagerie: #7e7823;
 $color__link__conception: #501752;
@@ -53,7 +57,7 @@ $color__nav:  rgb(189, 189, 189);
 $color__opacite__section : rgba(219, 219, 219, 0.5);
 
 /* Couleurs de base pour les nouvelles et les articles */
-$color__background-article: #ddd;
+$color__background-article: rgba(125, 192, 255, 0.8);
 $color__border-article : #e8f4fc;
 $color__background-nouvelles: rgba(181, 219, 255, 0.8);
 $color__background-bouton: rgba(217, 237, 255, 0.8);
