@@ -24,16 +24,20 @@ get_header();
 			/* Start the Loop */
             $precedant = 0;
 			while ( have_posts() ) :
+		
 				the_post();
 
-                $titre = get_the_title();
-                $session = substr($titre, 4, 1);
-                if($precedant!=$session){
-                    echo '<p>Session :' . $session . '</p>';
-                }
-
-                echo '<p>' . $session . ' ' . $titre . '</p>';
-                $precedant = $session;
+				$titre = get_the_title();
+				$session = substr($titre, 4, 1);
+				if($precedant!=$session && get_field('type_de_cours') != 'Projets personnels'){
+					echo '<h2>Session : ' . $session . '</h2>';
+				}
+				
+				if(get_field('type_de_cours') != 'Projets personnels'){
+					echo '<p>' . $session . ' ' . $titre . '</p>';
+				}
+				$precedant = $session;
+				
 			endwhile;
             
 		endif;

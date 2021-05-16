@@ -67,7 +67,7 @@ liste des cours et des posts
 					get_template_part( 'template-parts/content', 'galerie');
 
 				else :
-					get_template_part( 'template-parts/content', 'bloc' );
+					get_template_part( 'template-parts/content', 'bloc');
 				endif;
 				$precedant = $tPropriété['typeCours'];
 			
