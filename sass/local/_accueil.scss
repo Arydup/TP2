@@ -206,8 +206,10 @@ Les propriétés des nouvelles et des annonces
     }
 }
 
-#annonce{
-    margin-top: 20px;
-    background-color: #ddd;
-    height: 10vh;
+.home #annonce{
+    background-color: $color__background-article;
+    min-height: 160px;
+    height: auto;
+    padding: 25px 10px 10px 10px;
+    border-bottom: ridge 2px $color__border-article;
 }

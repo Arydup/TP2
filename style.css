@@ -55,6 +55,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Couleurs pour les sections du carroussel */
 /* Couleurs pour les sections de la page d'accueil */
 /* Couleurs de base dans la page d'accueil */
+/* Couleurs de base pour les nouvelles et les articles */
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -1403,10 +1404,12 @@ Les propriétés des nouvelles et des annonces
   }
 }
 
-#annonce {
-  margin-top: 20px;
+.home #annonce {
   background-color: #ddd;
-  height: 10vh;
+  min-height: 160px;
+  height: auto;
+  padding: 25px 10px 10px 10px;
+  border-bottom: ridge 2px #e8f4fc;
 }
 
 /* Local/caroussel
@@ -1457,24 +1460,6 @@ varier et modifier l'intégration
   align-items: center;
   justify-content: space-around;
   background-color: #8db69e;
-  /*
-        a{
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2.5rem;
-            text-decoration: none;
-            &:visited, &:active, &:link{
-                color: inherit;
-            }
-            transition: all ease 0.5s;
-                &:hover{
-                    color: azure;
-                    transform: scale(1.2);
-                }
-        }*/
 }
 
 @media (min-width: 600px) {
@@ -1931,7 +1916,7 @@ Pour le contenu
 /* Local/footer
 --------------------------------------------- */
 /*------------------------------------------------------------------------------
-Pour le footer
+Styles pour le footer
 ----------------------------------------------------------------------------- */
 .site-footer {
   background-color: #223777;
