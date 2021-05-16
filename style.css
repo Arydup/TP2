@@ -56,6 +56,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Couleurs pour les sections de la page d'accueil */
 /* Couleurs de base dans la page d'accueil */
 /* Couleurs de base pour les nouvelles et les articles */
+/* Les couleurs pour la sidebar*/
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -694,7 +695,7 @@ textarea {
 
 .widget-area {
   grid-area: sidebar;
-  background-color: rgba(181, 219, 255, 0.8);
+  background-color: rgba(200, 229, 255, 0.8);
 }
 
 .widget-area h2 {
@@ -1861,32 +1862,6 @@ Les propriétés du header
   margin: 0 0 30px 0;
 }
 
-/*------------------------------------------------------------------------------
-Pour le contenu
------------------------------------------------------------------------------ */
-#primary, #secondary {
-  margin-top: 3rem;
-}
-
-#secondary {
-  display: none;
-  margin-left: 2rem;
-  min-width: 275px;
-}
-
-@media (min-width: 800px) {
-  #secondary {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
-}
-
-#secondary form {
-  margin-top: 1rem;
-}
-
 /* Local/footer
 --------------------------------------------- */
 /*------------------------------------------------------------------------------
@@ -1942,6 +1917,7 @@ Styles pour le footer
 }
 
 .site-footer select {
+  text-align: center;
   color: rgba(133, 133, 133, 0.8);
   background-color: rgba(217, 237, 255, 0.8);
   cursor: pointer;
@@ -2019,7 +1995,31 @@ Les propriétés des nouvelles
 /*------------------------------------------------------------------------------
 Styles pour la sidebar
 ----------------------------------------------------------------------------- */
-#secondary {
-  padding-left: 8%;
+#primary, #secondary {
+  margin-top: 3rem;
+}
+
+#secondary section {
+  max-width: 320px;
+  font-size: clamp(0.8rem, -0.850rem + 3.333vw, 1.1rem);
+}
+
+@media (min-width: 800px) {
+  #secondary section {
+    flex: 1;
+    padding: 4%;
+  }
+}
+
+#secondary section form {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+#secondary section form .search-submit {
+  color: rgba(133, 133, 133, 0.8);
+  margin: 1%;
+  background-color: rgba(217, 237, 255, 0.8);
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

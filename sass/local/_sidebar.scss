@@ -1,6 +1,29 @@
 /*------------------------------------------------------------------------------
 Styles pour la sidebar
 ----------------------------------------------------------------------------- */
+#primary, #secondary{
+    margin-top: 3rem;
+}
 #secondary{
-    padding-left: 8%;
+    section{
+        //box-sizing: border-box;
+        max-width: 320px;
+        font-size: clamp(0.8rem, #{"-0.850rem + 3.333vw"}, 1.1rem);
+        @include media-desktop{
+            flex: 1;
+            padding: 4%;
+        }
+
+        form{
+            margin-top: 3rem;
+            text-align: center;
+            .search-submit{
+                color: $color__bouton;
+                margin: 1%;
+                background-color: $color__background-bouton;
+                cursor: pointer;
+            }
+        }
+    }
+    
 }
