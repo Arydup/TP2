@@ -64,12 +64,12 @@ varier et modifier l'intégration
             align-items: center;
             p{
                 font-size: clamp(.7rem, #{"-0.875rem + 8.333vw"}, 1rem);
-                font-weight: bold;
+                //font-weight: bold;
             }
             a{
                 font-size: clamp(1.5rem, #{"-0.875rem + 4.333vw"}, 2.2rem);
                 text-decoration: none;
-                font-weight: bold;
+                //font-weight: bold;
             }
         }
         
