@@ -36,15 +36,15 @@ Bouton burger
             //État initial
             clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
             //État final : clip-path: polygon(5% -5%, 105% 95%, 95% 105%, -5% 5%);
-            background-color: rgb(164, 184, 112);
+            background-color: $color__burger;
         }
         &:nth-of-type(2){
             clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
-            background-color: rgb(164, 184, 112);
+            background-color: $color__burger;
         }
         &:nth-of-type(3){
             clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
-            background-color: rgb(164, 184, 112);
+            background-color: $color__burger;
             z-index: 1;
         }
     }

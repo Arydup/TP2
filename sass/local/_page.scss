@@ -4,7 +4,7 @@ Les propriétés du header
 ------------------------------------------------------------------------------*/
 .site-title {
     font-family: $font__title;
-    font-size: clamp(.8rem, #{"-0.875rem + 5.633vw"}, 2.5rem);
+    font-size: clamp(1.8rem, #{"-0.875rem + 5.633vw"}, 2.5rem);
     font-weight: bold;
     text-decoration: none;
     color: #003;
