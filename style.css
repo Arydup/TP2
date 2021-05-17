@@ -1848,7 +1848,7 @@ Les propriétés du header
 
 .page-header .page-title, .page-header .entry-title, .entry-header .page-title, .entry-header .entry-title {
   font-size: clamp(1.8rem, -0.875rem + 8.333vw, 4rem);
-  color: #2a3da5;
+  color: #515da1;
   margin-bottom: 0;
 }
 

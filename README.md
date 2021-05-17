@@ -1,12 +1,14 @@
 # TIM Maisonneuve #
 ## Créé par : Aryane Duperron ##
-### Labo 9 ###
+### TP2 ###
 --------------------------------
 Groupe 1, cours du mardi
 
 En plus du cours, les modifications principales apportées sont :
-- Ajout de nouvelles --> non fonctionnel erreur 400
-- Modification du visuel des pages
-- Modification des widget-area directement dans wordpress
+- Ajout et optimisation des nouvelles avec l'api-rest.js 
+- l'ajout d'annonces avec l'api-rest
+- Modification de la majorité des couleurs et utilisation de _colors.scss
+- Modification des zones de widget-area
+- Optimisation du carroussel et ses couleurs 
 
 Lien vers ma page wordpress sur [webdev](https://e1724050.webdev.cmaisonneuve.qc.ca/tim)
