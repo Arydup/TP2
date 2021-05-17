@@ -92,7 +92,7 @@ liste des cours et des posts
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();
 
 function convertir_tableau(&$tPropriété){
