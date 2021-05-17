@@ -11,4 +11,4 @@ En plus du cours, les modifications principales apportées sont :
 - Modification des zones de widget-area
 - Optimisation du carroussel et ses couleurs 
 
-Lien vers ma page wordpress sur [webdev](https://e1724050.webdev.cmaisonneuve.qc.ca/tim)
+Lien vers ma page wordpress sur [webdev](https://e1724050.webdev.cmaisonneuve.qc.ca/TP2)
