@@ -6,7 +6,7 @@ body {
 
 	.site {
 		display: grid;
-		grid-template-columns: auto;
+		grid-template-columns: 100%;
 		grid-template-areas:
 			"header"
 			"main"
@@ -33,5 +33,4 @@ body {
 		margin-right: 3rem;
 	}
 }
-
 

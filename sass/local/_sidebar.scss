@@ -5,6 +5,10 @@ Styles pour la sidebar
     margin-top: 3rem;
 }
 #secondary{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     section{
         //box-sizing: border-box;
         max-width: 320px;
