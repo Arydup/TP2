@@ -7,6 +7,12 @@ Styles pour le formulaire
     height: auto;
     padding: 25px 10px 10px 10px;
     border-bottom: ridge 2px $color__border-article;
+    h2{
+        font-size: clamp(1.5rem, #{"-0.875rem + 4.333vw"}, 2.3rem);
+    }
+    p{
+        font-size: clamp(.7rem, #{"-0.875rem + 8.333vw"}, 1rem);
+    }
 }
 
 .admin-rapide{

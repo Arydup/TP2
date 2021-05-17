@@ -1935,6 +1935,14 @@ Styles pour le formulaire
   border-bottom: ridge 2px #e8f4fc;
 }
 
+.home #annonce h2 {
+  font-size: clamp(1.5rem, -0.875rem + 4.333vw, 2.3rem);
+}
+
+.home #annonce p {
+  font-size: clamp(0.7rem, -0.875rem + 8.333vw, 1rem);
+}
+
 .admin-rapide {
   margin-top: 10%;
   padding: 5% 4% 5% 3%;
